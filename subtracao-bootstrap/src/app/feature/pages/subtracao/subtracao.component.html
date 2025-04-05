@@ -1,0 +1,71 @@
+
+<section style="background-color: #d5a9ee; padding: 20px; height: 100vh; width: 100vw;">
+
+    <nav class="navbar navbar-default">
+    <div class="container-fluid" style="display: flex; justify-content: center;" >
+        <p class="navbar" href="#" >
+        <strong>
+        <h1> Projeto Subtração</h1>
+        </strong>
+        </p>
+    </div>
+    </nav>
+    <br>
+
+    <div class="container-fluid d-flex justify-content-center align-items-center" style="height: 50vh; width: 100vw; margin-left: 400px ;">
+    <div class="col-md-10">
+        <form>
+            <div class="form-group row">
+            <label for="numero1" class="col-md-2 col-form-label">
+            Número 1: 
+            </label>
+    </div>
+
+    <div class="col-md-4">
+        <input id="numero1" class="form-control"
+        placeholder="Número 1" #numero1 type="text" />
+        <small class="form-text text-muted">
+            Digite o primeiro número da subtração
+        </small>
+    </div>
+    <br>
+
+    <div class="form-group row">
+        <label for="numero2" class="col-md-2 col-form-label">
+        Número 2: 
+        </label>
+    </div>
+
+    <div class="col-md-4">
+        <input id="numero2" class="form-control"
+            placeholder="Número 2" #numero2 type="text" />
+        <small class="form-text text-muted">
+            Digite o segundo número da subtração
+        </small>
+    </div>
+    <br>
+
+        <div class="row col col-md-2 offset-md-0">
+            <button type="button" class ="btn btn-primary"
+            (click)="subtracaoBotao(numero1.value, numero2.value)">
+            Subtrair
+            </button>
+        </div>
+
+        <div class = "form-group row">
+            <label for="resultado" class="col-md-2col-form-label">
+            <br>
+            Resultado:
+            </label>
+        
+        <div class="col-md-2">
+            <input id="resultado" class="form-control"
+                type="text"[value]="resultado" readonly />
+         </div>
+        </div>
+    </form>
+</div>
+</div>
+</section>
+
+
