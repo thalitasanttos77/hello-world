@@ -1,0 +1,72 @@
+<section style="background-color: #b4f5f2; padding: 20px; height: 100vh; width: 100vw;">
+
+<nav class="navbar navbar-default">
+    <div class="container" style="display: flex; justify-content: center;" >
+        <a class="navbar-brand" href="#" >
+        <strong> 
+        <h2>Projeto Soma</h2>
+        </strong>
+        </a>
+    </div>
+</nav>
+<br>
+
+
+<div class="container-fluid d-flex justify-content-center align-items-center" style="height: 50vh; width: 100vw; margin-left: 200px ;">
+    <div class=" col-md-8">
+        <form>
+            <div class = "form-group row">
+                <label for="numero1" class = "col-md-2 col-form-label">
+                    Número 1:
+                </label>
+            
+            <div class = "col-md-4">
+                <input id="numero1" class="form-control"
+                    placeholder="Número 1" #numero1 type="text" />
+                <small class ="form-text text-muted">
+                    Digite o primeiro número da soma
+                <br>
+                </small>
+                <br>
+            </div>
+            </div>
+
+            <div class = "form-group row">
+                <label for="numero2" class = "col-md-2 col-form-label">
+                    Número 1:
+                </label>
+            
+            <div class = "col-md-4">
+                <input id="numero2" class="form-control"
+                    placeholder="Número 2" #numero2 type="text" />
+                <small class ="form-text text-muted">
+                    Digite o segundo número da soma
+                <br>
+                </small>
+                <br>
+                </div>
+            </div>
+
+            <div class = "row col col-md-2 offset-md-2">
+                <button type="button" class ="btn btn-primary"
+                (click)="somarBotao(numero1.value, numero2.value)">
+                Somar
+            </button>
+            </div>
+
+            <div class = "form-group row">
+                <label for="resultado" class="col-md-2 col-form-label">
+                <br>
+                    Resultado:
+                </label>
+            
+            <div class="col-md-4">
+                <br>
+                <input id="resultado" class="form-control"
+                    type="text"[value]="resultado" readonly />
+            </div>
+        </div>
+        </form>
+    </div>
+</div>
+</section>
