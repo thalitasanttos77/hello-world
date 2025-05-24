@@ -33,6 +33,21 @@
                  Digite a idade da pessoa. 
                 </div>
             </div>
+        </div>
+
+    <div class="form-group">
+        <label for="nome">Nascimento:</label>
+            <input type="text" class="form-control" id="nascimento" name="nascimento" 
+            [(ngModel)]="pessoa.nascimento" 
+            #nascimento="ngModel"
+            minlength="6" required>
+        
+            <div *ngIf="nascimento.errors && (nascimento.dirty || nascimento.touched)"
+                class="alert alert-danger">
+            <div [hidden]="! nascimento.errors['required']">
+                 Digite a data de nascimento da pessoa. 
+            </div>
+        </div>
     </div>
 
         <div class="form-group">
