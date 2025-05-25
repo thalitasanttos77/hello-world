@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { EnderecoService } from '../../services/endereco.service';
 import { Endereco } from '../../shared/models/endereco.model';
 import { CommonModule } from '@angular/common';
@@ -10,7 +10,7 @@ import { RouterModule } from '@angular/router';
   templateUrl: './listar-endereco.component.html',
   styleUrl: './listar-endereco.component.css'
 })
-export class ListarEnderecoComponent {
+export class ListarEnderecoComponent implements OnInit {
   enderecos : Endereco[] = [];
   constructor(private enderecoService: EnderecoService) {}
 

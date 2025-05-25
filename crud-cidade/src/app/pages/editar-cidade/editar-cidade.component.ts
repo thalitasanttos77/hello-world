@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormsModule, NgForm} from '@angular/forms';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
@@ -12,7 +12,7 @@ import { CidadeService } from '../../services/cidade.service';
   templateUrl: './editar-cidade.component.html',
   styleUrl: './editar-cidade.component.css'
 })
-export class EditarCidadeComponent {
+export class EditarCidadeComponent implements OnInit {
 @ViewChild('formCidade') formCidade! : NgForm;
 cidade: Cidade = new Cidade();
 constructor(
@@ -20,7 +20,6 @@ constructor(
   private route: ActivatedRoute,
   private router: Router
 ){}
-
 
 ngOnInit(): void {
    
