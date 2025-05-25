@@ -1,17 +1,15 @@
 import { Component } from '@angular/core';
 import { ViewChild} from '@angular/core';
 import { FormsModule, NgForm} from '@angular/forms';
-import { Pessoa } from '../../shared/models/pessoa.model';
 import { PessoaService } from '../../services/pessoa.service';
 import { Router, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { NumericoDirective } from '../../shared/directives/numerico.directive';
-import { MinimoValidatorDirective } from '../../shared/directives/minimo-validator.directive';
-import { NgxMaskDirective } from 'ngx-mask';
+import { SharedModule } from '../../shared';
+import { Pessoa } from '../../shared';
 
 @Component({
   selector: 'app-inserir-pessoa',
-  imports: [CommonModule, FormsModule, RouterModule, NumericoDirective, MinimoValidatorDirective, NgxMaskDirective],
+  imports: [CommonModule, FormsModule, RouterModule, SharedModule],
   templateUrl: './inserir-pessoa.component.html',
   styleUrl: './inserir-pessoa.component.css'
 })

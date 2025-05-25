@@ -1,16 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { ViewChild} from '@angular/core';
 import { FormsModule, NgForm} from '@angular/forms';
-import { Pessoa } from '../../shared/models/pessoa.model';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { PessoaService } from '../../services/pessoa.service';
 import { CommonModule } from '@angular/common';
-import { MinimoValidatorDirective } from '../../shared/directives/minimo-validator.directive';
-import { NgxMaskDirective } from 'ngx-mask';
+import { SharedModule } from '../../shared';
+import { Pessoa } from '../../shared';
 
 @Component({
   selector: 'app-editar-pessoa',
-  imports: [CommonModule, FormsModule, RouterModule, MinimoValidatorDirective, NgxMaskDirective],
+  imports: [CommonModule, FormsModule, RouterModule, SharedModule],
   templateUrl: './editar-pessoa.component.html',
   styleUrl: './editar-pessoa.component.css'
 })

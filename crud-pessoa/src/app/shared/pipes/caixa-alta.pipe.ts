@@ -2,7 +2,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
   name: 'caixaAlta',
-  standalone: true
+  standalone: false
 })
 export class CaixaAltaPipe implements PipeTransform {
 

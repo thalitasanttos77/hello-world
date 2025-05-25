@@ -3,7 +3,7 @@ import { FormControl, ValidationErrors, Validator, NG_VALIDATORS} from '@angular
 
 @Directive({
   selector: '[minimo]', //trocar appMinimoValidator para "minimo"
-  standalone: true,
+  standalone: false,
   providers: [{
     provide: NG_VALIDATORS,
     useExisting: MinimoValidatorDirective,

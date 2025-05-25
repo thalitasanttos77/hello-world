@@ -13,7 +13,7 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms'; //inte
 
 @Directive({
   selector: '[numerico]', //atributo a ser usado na tag html para aplicar a diretiva appNumerico, trocar para "numerico"
-  standalone: true,
+  standalone: false,
   providers: [{
     provide: NG_VALUE_ACCESSOR,
     useExisting: NumericoDirective,
