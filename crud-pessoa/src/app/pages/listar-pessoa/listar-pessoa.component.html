@@ -14,9 +14,9 @@
       </th>
     </tr>
     <tr *ngFor="let pessoa of pessoas" >
-      <td> {{pessoa.nome}} </td>
+      <td> {{pessoa.nome | caixaAlta}} </td> 
       <td> {{pessoa.idade}} </td>
-      <td> {{pessoa.nascimento}} </td>
+      <td> {{pessoa.nascimento | mask: 'd0/M0/0000'}} </td>
 
       <td class="text-center" style="width: 300px">
         <a href="#" title="Editar" alt="Editar"

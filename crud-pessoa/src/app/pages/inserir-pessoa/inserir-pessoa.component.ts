@@ -6,10 +6,12 @@ import { PessoaService } from '../../services/pessoa.service';
 import { Router, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { NumericoDirective } from '../../shared/directives/numerico.directive';
+import { MinimoValidatorDirective } from '../../shared/directives/minimo-validator.directive';
+import { NgxMaskDirective } from 'ngx-mask';
 
 @Component({
   selector: 'app-inserir-pessoa',
-  imports: [CommonModule, FormsModule, RouterModule, NumericoDirective],
+  imports: [CommonModule, FormsModule, RouterModule, NumericoDirective, MinimoValidatorDirective, NgxMaskDirective],
   templateUrl: './inserir-pessoa.component.html',
   styleUrl: './inserir-pessoa.component.css'
 })

@@ -25,21 +25,25 @@
             <input type="text" class="form-control" id="idade" 
                 name="idade"
                 [(ngModel)]="pessoa.idade"
-                #idade="ngModel" numerico 
+                #idade="ngModel" numerico minimo
                 required>
             <div *ngIf="idade.errors && (idade.dirty || idade.touched)"
                 class="alert alert-danger">
              <div [hidden]="! idade.errors['required']">
                  Digite a idade da pessoa. 
                 </div>
+                <div [hidden]="!idade.errors['minimo']">
+                A idade da pessoa deve ser um número maior ou igual a {{idade.errors['requiredValue']}}.
             </div>
         </div>
+    </div>
 
     <div class="form-group">
         <label for="nascimento">Nascimento:</label>
             <input type="text" class="form-control" id="nascimento" name="nascimento" 
             [(ngModel)]="pessoa.nascimento" 
             #nascimento="ngModel"
+            mask="d0/M0/0000"
             minlength="6" required>
         
             <div *ngIf="nascimento.errors && (nascimento.dirty || nascimento.touched)"

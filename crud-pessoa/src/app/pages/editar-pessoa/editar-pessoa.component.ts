@@ -5,10 +5,12 @@ import { Pessoa } from '../../shared/models/pessoa.model';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { PessoaService } from '../../services/pessoa.service';
 import { CommonModule } from '@angular/common';
+import { MinimoValidatorDirective } from '../../shared/directives/minimo-validator.directive';
+import { NgxMaskDirective } from 'ngx-mask';
 
 @Component({
   selector: 'app-editar-pessoa',
-  imports: [CommonModule, FormsModule, RouterModule],
+  imports: [CommonModule, FormsModule, RouterModule, MinimoValidatorDirective, NgxMaskDirective],
   templateUrl: './editar-pessoa.component.html',
   styleUrl: './editar-pessoa.component.css'
 })

@@ -4,8 +4,9 @@
     <form #formPessoa="ngForm">
         <div class="form-group">
             <label for="nome">Nome:</label>
-            <input type="text" class="form-control" id="nome" name="nome"
+            <input type="text" class="form-control" id="nome" name="nome" 
                 [(ngModel)] ="pessoa.nome" #nome="ngModel"
+                mask="d0/M0/0000"
                 minlength="2" required>
 
              <div *ngIf="nome.errors && (nome.dirty || nome.touched)"   
@@ -22,6 +23,9 @@
             <label for="idade">Idade:</label>
             <input type="text" class="form-control" id="idade" name="idade"
             [(ngModel)]="pessoa.idade" #idade="ngModel"
+            numerico
+            minimo
+            valorMinimo="18"
             required>
     
             <div *ngIf="idade.errors && (idade.dirty || idade.touched)"
