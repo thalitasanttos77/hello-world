@@ -21,6 +21,11 @@
         <a *ngIf="temPermissao('ADMIN', 'FUNC')"
           class="nav-link" href="#" routerLink="/cidades">Estados</a>
       </li>
+      <li class="nav-item">
+        <a *ngIf="temPermissao('ADMIN')"
+          class="nav-link" href="#" routerLink="/usuarios">Usuários</a>
+      </li>
+
       <li class="nav-item" ngbDropdown>
         <a class="nav-link" tabindex="0" ngbDropdownToggle
           id="navbarDropdownl" role="button">Cadastros
@@ -35,6 +40,8 @@
           <a *ngIf="temPermissao('ADMIN', 'FUNC')"
             ngbDropdownItem href="#" routerLink="/estados">Estados</a>
             </div>
+          <a *ngIf="temPermissao('ADMIN')"
+            ngbDropdownItem href="#" routerLink="/usuarios">Usuários</a>
         </li>
       </ul>
     </div>

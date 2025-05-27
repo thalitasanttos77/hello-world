@@ -4,6 +4,8 @@ import { InserirPessoaComponent } from './auth/inserir-pessoa/inserir-pessoa.com
 import { InserirCidadeComponent } from './auth/inserir-cidade/inserir-cidade.component';
 import { authGuard } from './auth/auth.guard';
 import { HomeComponent } from './home/home.component';
+import { ListarUsuarioComponent } from './usuario/listar-usuario/listar-usuario.component';
+import { InserirEditarUsuarioComponent } from './usuario/inserir-editar-usuario/inserir-editar-usuario.component';
 
 export const routes: Routes = [
 
@@ -56,7 +58,37 @@ export const routes: Routes = [
         data: {
             role: 'ADMIN,FUNC,GERENTE'
         }
+    },
+    {
+        path: 'usuarios',
+        redirectTo: 'usuarios/listar'
+    },
+    {
+        path: 'usuarios/listar',
+        component: ListarUsuarioComponent,
+        canActivate: [authGuard],
+        data: {
+        role: 'ADMIN'
+        }
+    },
+    {
+    path: 'usuarios/novo',
+    component: InserirEditarUsuarioComponent,
+    canActivate: [authGuard],
+    data: {
+    role: 'ADMIN'
     }
+    },
+    {
+    path: 'usuarios/editar/:id',
+    component: InserirEditarUsuarioComponent,
+    canActivate: [authGuard],
+    data: {
+    role: 'ADMIN'
+    }
+}
+
+
     
 
 
